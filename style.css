@@ -2,14 +2,13 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
+	min-height: calc(100vh - 8rem);
 	padding: 4rem 2rem;
 	font-size: 13px;
 	font-family: 'Lexend Deca', sans-serif;
 	color: white;
 	background: hsl(233, 47%, 7%);
 }
-
 main {
 	display: flex;
 	flex-direction: column-reverse;
@@ -17,7 +16,6 @@ main {
 	overflow: hidden;
 	background: hsl(244, 38%, 16%);
 }
-
 section {
 	max-width: 375px;
 	display: flex;
@@ -26,66 +24,57 @@ section {
 	align-items: center;
 	text-align: center;
 }
-
 section:first-of-type {
 	padding: 2rem 0
 }
 section:first-of-type > * {
 	padding: 0 2rem;
 }
-
 img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
 }
-
 section:last-of-type {
 	position: relative;
 }
-
 section:last-of-type::before {
 	content: "";
 	position: absolute;
 	top: 0; left: 0;
 	width: 100%; height: 100%;
-	background-color: hsla(277, 64%, 40%, 0.5);
+	background-color: hsla(277, 64%, 35%, 0.5);
 	z-index: 10;
 }
-
 h1 {
 	font-size: 2rem;
 	line-height: 2.5rem;
 	font-weight: bold;
 	font-family: 'Inter', sans-serif;
 }
-
 span {
 	color: hsl(277, 64%, 61%)
 }
-
 section > p {
-	max-width: 310px;
+	max-width: 270px;
 	color: hsla(0, 0%, 100%, 0.75);
 	line-height: 1.5rem;
 }
-
 #infos {
 	margin-top: 1rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	width: calc(100% - 8rem);
 	max-width: 310px;
 	gap: 1rem;
 }
-
 .info__numbers {
 	font-size: 1.4rem;
 	line-height: 2rem;
 	font-weight: bold;
 	font-family: 'Inter', sans-serif;
 }
-
 .info p {
 	text-transform: uppercase;
 	font-family: 'Inter', sans-serif;
@@ -108,6 +97,9 @@ section > p {
 	}
 	section:first-of-type > * {
 		padding: 0 4rem;
+	}
+	section > p {
+		max-width: 310px;
 	}
 	#infos {
 		margin-top: 3rem;
